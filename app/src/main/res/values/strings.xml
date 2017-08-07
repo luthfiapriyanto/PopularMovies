@@ -7,4 +7,7 @@
     <string name="movie_poster">movie_poster</string>
     <string name="top_rated">Top Rated</string>
     <string name="popular">Popular</string>
+    <string name="review">Review</string>
+    <string name="favorite">Favorite</string>
+    <string name="apikey">PLACE_YOUR_APIKEY_HERE</string>
 </resources>

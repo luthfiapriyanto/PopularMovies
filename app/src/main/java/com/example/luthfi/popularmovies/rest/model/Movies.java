@@ -5,7 +5,7 @@ package com.example.luthfi.popularmovies.rest.model;
  */
 
 public class Movies {
-    int id;
+    String id;
     String vote_average;
     String title;
     Double popularity;
@@ -15,11 +15,25 @@ public class Movies {
     String overview;
     String release_date;
 
-    public int getId() {
+    public Movies(String id, String vote_average, String title, Double popularity, String poster_path, String original_title,
+                  String backdrop_path, String overview, String release_date) {
+        this.id = id;
+        this.vote_average = vote_average;
+        this.title = title;
+        this.popularity = popularity;
+        this.poster_path = poster_path;
+        this.original_title = original_title;
+        this.backdrop_path = backdrop_path;
+        this.overview = overview;
+        this.release_date = release_date;
+
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

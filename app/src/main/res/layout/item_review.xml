@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mTVcontent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_marginTop="6dp"
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="italic"
+        android:id="@+id/mTVauthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="andrea"
+        android:layout_below="@+id/mTVcontent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <View
+        android:layout_marginBottom="16dp"
+        android:background="#d3d3d3"
+        android:layout_below="@+id/mTVauthor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</RelativeLayout>

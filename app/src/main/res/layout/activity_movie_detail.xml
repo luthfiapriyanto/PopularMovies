@@ -41,6 +41,15 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true" />
+                <ImageView
+                    android:id="@+id/mIVplay"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/play_button"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/mTVrating"
+                    android:layout_toStartOf="@+id/mTVrating" />
                 <TextView
                     android:layout_marginLeft="5dp"
                     android:textSize="13sp"
@@ -56,6 +65,14 @@
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true" />
+                <ImageView
+                    android:id="@+id/mIVstar"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/mIVplay"
+                    android:layout_toStartOf="@+id/mIVplay" />
             </RelativeLayout>
             <TextView
                 android:textColor="@android:color/secondary_text_light_nodisable"
@@ -69,6 +86,19 @@
                 android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@android:color/holo_orange_dark"
+                android:text="Reviews"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRVreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:nestedScrollingEnabled="false" />
         </LinearLayout>
 
     </LinearLayout>

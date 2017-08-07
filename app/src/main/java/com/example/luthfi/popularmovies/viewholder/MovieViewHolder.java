@@ -1,4 +1,4 @@
-package com.example.luthfi.popularmovies;
+package com.example.luthfi.popularmovies.viewholder;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.luthfi.popularmovies.MovieDetailActivity;
+import com.example.luthfi.popularmovies.R;
 import com.example.luthfi.popularmovies.rest.model.Movies;
 import com.squareup.picasso.Picasso;
 
@@ -14,7 +16,7 @@ public class MovieViewHolder extends RecyclerView.ViewHolder implements View.OnC
     ImageView mIVposter;
     Movies movies;
     Context mContext;
-    String baseImageUrl, title, date, rating, backdrop, desc;
+    String baseImageUrl, title, date, rating, backdrop, desc, Id, poster;
 
     public MovieViewHolder(Context mContext, View itemView) {
         super(itemView);
@@ -33,21 +35,24 @@ public class MovieViewHolder extends RecyclerView.ViewHolder implements View.OnC
         title = movies.getTitle();
         date = movies.getRelease_date();
         rating = movies.getVote_average();
-        backdrop = baseImageUrl+"original"+movies.getBackdrop_path();
+        backdrop = movies.getBackdrop_path();
         desc = movies.getOverview();
+        Id = movies.getId();
+        poster = movies.getPoster_path();
 
         this.movies = movies;
     }
 
     @Override
     public void onClick(View v) {
-        Log.e("TAG", "onClick: "+"v" );
         Intent intent = new Intent(v.getContext(), MovieDetailActivity.class);
         intent.putExtra("title", title);
         intent.putExtra("date", date);
         intent.putExtra("rating", rating);
         intent.putExtra("backdrop", backdrop);
         intent.putExtra("desc", desc);
+        intent.putExtra("Id", Id);
+        intent.putExtra("poster", poster);
 
         v.getContext().startActivity(intent);
     }
